@@ -1,0 +1,410 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>小书屋</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+	<link href="/css/css-OpenSans300400600700800.css" rel="stylesheet"> 
+	<link href="/css/css-Poppins300300i400400i5006006.css" rel="stylesheet">
+	<link href="/css/css-Roboto100300400500700900.css" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/plugins.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="/css/custom.css">
+
+	<!-- Modernizer js -->
+	<script src="/js/modernizr-3.5.0.min.js"></script>
+</head>
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		
+		<!-- Header -->
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
+						<div class="logo">
+							<a href="/home">
+								<img src="/picture/logo.png" alt="logo images">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-8 d-none d-lg-block">
+						<nav class="mainmenu__nav">
+							<ul class="meninmenu d-flex justify-content-start">
+								<li><a href="/home">主页</a></li>
+							
+								<li><a href="">详情</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-8 col-sm-8 col-5 col-lg-2">
+						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+							<li class="shop_search"><a class="search__active" href=""></a></li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- Start Mobile Menu -->
+				<div class="row d-none">
+					<div class="col-lg-12 d-none">
+						<nav class="mobilemenu__nav">
+							<ul class="meninmenu">
+								<li><a href="/home">主页</a></li>
+							
+								<li><a href="">详情</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- End Mobile Menu -->
+	            <div class="mobile-menu d-block d-lg-none">
+	            </div>
+	            <!-- Mobile Menu -->	
+			</div>		
+		</header>
+		<!-- //Header -->
+		<!-- Start Search Popup -->
+		<div class="box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" method="POST" action="/search">
+				<div class="field__search">
+					<input type="text" name="key" placeholder="Search entire store here...">
+					<div class="action">
+						<a role="button" type="submit"><i class="zmdi zmdi-search"></i></a>
+					</div>
+				</div>
+			</form>
+			<div class="close__wrap">
+				<span>close</span>
+			</div>
+		</div>
+		<!-- End Search Popup -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">详情</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="/home">主页</a>
+                              
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- Start main Content -->
+        <div class="maincontent bg--white pt--80 pb--55">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-9 col-12">
+        				<div class="wn__single__product">
+        					<div class="row">
+        						<div class="col-lg-6 col-12">
+        							<div class="wn__fotorama__wrapper">
+	        							<div class="fotorama wn__fotorama__action" data-nav="thumbs">
+		        							  <a href="javascript:;"><img src="<%-book.imgurl%>" alt=""></a>
+		        							 
+	        							</div>
+        							</div>
+        						</div>
+        						<div class="col-lg-6 col-12">
+        							<div class="product__info__main">
+        								<h1><%-book.title%></h1>
+        								
+        									<p>阅读量:<span><%-book.looks%></span></p>
+        									<p>出版时间:<span><%-book.pubtime%></span></p>
+        									<p>评分:<span><%-book.rate%>/10分</span></p>
+        									<p>ISBN:<span><%-book.ISBN%></span></p>
+        									<p>作者:<span><%-book.author%></span></p>
+        			
+        								<div class="box-tocart d-flex">
+        									<div class="addtocart__actions">
+        										<a class="tocart" type="submit" title="下载" href="<%-book.downloadurl1%>" >下载链接1</a>
+        										<a class="tocart" type="submit" title="下载" href="<%-book.downloadurl2%>" >下载链接2</a>
+        										<a class="tocart" type="submit" title="下载" href="<%-book.downloadurl3%>" >下载链接3</a>
+        									</div>
+        								</div>
+        							
+        								
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="product__info__detailed">
+							<div class="pro_details_nav nav justify-content-start" role="tablist">
+	                            <a class="nav-item nav-link active" data-toggle="tab" href="" role="tab">Details</a>
+	                          
+	                        </div>
+	                        <div class="tab__container">
+	                        	<!-- Start Single Tab Content -->
+	                        	<div class="pro__tab_label tab-pane fade show active" id="nav-details" role="tabpanel">
+									<div class="description__attribute">
+										<p><%-book.detail%></p>
+									</div>
+	                        	</div>
+	                        	<!-- End Single Tab Content -->
+	                        	<!-- Start Single Tab Content -->
+	                        	<div class="pro__tab_label tab-pane fade" id="nav-review" role="tabpanel">
+									<div class="review__attribute">
+										<h1>Customer Reviews</h1>
+										<h2>Hastech</h2>
+										<div class="review__ratings__type d-flex">
+											<div class="review-ratings">
+												<div class="rating-summary d-flex">
+													<span>Quality</span>
+			    									<ul class="rating d-flex">
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+
+												<div class="rating-summary d-flex">
+													<span>Price</span>
+			    									<ul class="rating d-flex">
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+												<div class="rating-summary d-flex">
+													<span>value</span>
+			    									<ul class="rating d-flex">
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+											</div>
+											<div class="review-content">
+												<p>Hastech</p>
+												<p>Review by Hastech</p>
+												<p>Posted on 11/6/2018</p>
+											</div>
+										</div>
+									</div>
+									<div class="review-fieldset">
+										<h2>You're reviewing:</h2>
+										<h3>Chaz Kangeroo Hoodie</h3>
+										<div class="review-field-ratings">
+											<div class="product-review-table">
+												<div class="review-field-rating d-flex">
+													<span>Quality</span>
+													<ul class="rating d-flex">
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+												<div class="review-field-rating d-flex">
+													<span>Price</span>
+													<ul class="rating d-flex">
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+												<div class="review-field-rating d-flex">
+													<span>Value</span>
+													<ul class="rating d-flex">
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+											</div>
+										</div>
+										<div class="review_form_field">
+											<div class="input__box">
+												<span>Nickname</span>
+												<input id="nickname_field" type="text" name="nickname">
+											</div>
+											<div class="input__box">
+												<span>Summary</span>
+												<input id="summery_field" type="text" name="summery">
+											</div>
+											<div class="input__box">
+												<span>Review</span>
+												<textarea name="review"></textarea>
+											</div>
+											<div class="review-form-actions">
+												<button>Submit Review</button>
+											</div>
+										</div>
+									</div>
+	                        	</div>
+	                        	<!-- End Single Tab Content -->
+	                        </div>
+        				</div>
+						
+        			</div>
+        			<div class="col-lg-3 col-12 md-mt-40 sm-mt-40" style="border-left: 1px solid black;">
+								我的小书屋
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <!-- End main Content -->
+		<!-- Start Search Popup -->
+		<div class="box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" method="POST" action="/search">
+				<div class="field__search">
+					<input type="text" name="key" placeholder="Search entire store here...">
+					<div class="action">
+						<a role="button" type="submit"><i class="zmdi zmdi-search"></i></a>
+					</div>
+				</div>
+			</form>
+			<div class="close__wrap">
+				<span>close</span>
+			</div>
+		</div>
+		<!-- End Search Popup -->
+	
+		
+		<!-- Footer Area -->
+		<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+			
+			<div class="copyright__wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="copyright">
+								<div class="copy__right__inner text-left">
+									<p>Copyright &copy; 书屋小练习</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //Footer Area -->
+		<!-- QUICKVIEW PRODUCT -->
+		<div id="quickview-wrapper">
+		    <!-- Modal -->
+		    <div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
+		        <div class="modal-dialog modal__container" role="document">
+		            <div class="modal-content">
+		                <div class="modal-header modal__header">
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		                </div>
+		                <div class="modal-body">
+		                    <div class="modal-product">
+		                        <!-- Start product images -->
+		                        <div class="product-images">
+		                            <div class="main-image images">
+		                                <img alt="big images" src="/picture/14.jpg">
+		                            </div>
+		                        </div>
+		                        <!-- end product images -->
+		                        <div class="product-info">
+		                            <h1>Simple Fabric Bags</h1>
+		                            <div class="rating__and__review">
+		                                <ul class="rating">
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                </ul>
+		                                <div class="review">
+		                                    <a href="">4 customer reviews</a>
+		                                </div>
+		                            </div>
+		                            <div class="price-box-3">
+		                                <div class="s-price-box">
+		                                    <span class="new-price">$17.20</span>
+		                                    <span class="old-price">$45.00</span>
+		                                </div>
+		                            </div>
+		                            <div class="quick-desc">
+		                                Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look.
+		                            </div>
+		                            <div class="select__color">
+		                                <h2>Select color</h2>
+		                                <ul class="color__list">
+		                                    <li class="red"><a title="Red" href="">Red</a></li>
+		                                    <li class="gold"><a title="Gold" href="">Gold</a></li>
+		                                    <li class="orange"><a title="Orange" href="">Orange</a></li>
+		                                    <li class="orange"><a title="Orange" href="">Orange</a></li>
+		                                </ul>
+		                            </div>
+		                            <div class="select__size">
+		                                <h2>Select size</h2>
+		                                <ul class="color__list">
+		                                    <li class="l__size"><a title="L" href="">L</a></li>
+		                                    <li class="m__size"><a title="M" href="">M</a></li>
+		                                    <li class="s__size"><a title="S" href="">S</a></li>
+		                                    <li class="xl__size"><a title="XL" href="">XL</a></li>
+		                                    <li class="xxl__size"><a title="XXL" href="">XXL</a></li>
+		                                </ul>
+		                            </div>
+		                            <div class="social-sharing">
+		                                <div class="widget widget_socialsharing_widget">
+		                                    <h3 class="widget-title-modal">Share this product</h3>
+		                                    <ul class="social__net social__net--2 d-flex justify-content-start">
+		                                        <li class="facebook"><a href="" class="rss social-icon"><i class="zmdi zmdi-rss"></i></a></li>
+		                                        <li class="linkedin"><a href="" class="linkedin social-icon"><i class="zmdi zmdi-linkedin"></i></a></li>
+		                                        <li class="pinterest"><a href="" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
+		                                        <li class="tumblr"><a href="" class="tumblr social-icon"><i class="zmdi zmdi-tumblr"></i></a></li>
+		                                    </ul>
+		                                </div>
+		                            </div>
+		                            <div class="addtocart-btn">
+		                                <a href="">Add to cart</a>
+		                            </div>
+		                        </div><!-- .product-info -->
+		                    </div><!-- .modal-product -->
+		                </div><!-- .modal-body -->
+		            </div><!-- .modal-content -->
+		        </div><!-- .modal-dialog -->
+		    </div>
+		    <!-- END Modal -->
+		</div>
+		<!-- END QUICKVIEW PRODUCT -->
+
+	</div>
+	<!-- //Main wrapper -->
+
+	
+
+	<!-- JS Files -->
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/plugins.js"></script>
+	<script src="/js/active.js"></script>
+	
+</body>
+</html>

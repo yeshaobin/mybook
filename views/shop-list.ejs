@@ -1,0 +1,783 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>小书屋</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+	<link href="/css/css-OpenSans300400600700800.css" rel="stylesheet">
+	<link href="/css/css-Poppins300300i400400i5006006.css" rel="stylesheet">
+	<link href="/css/css-Roboto100300400500700900.css" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/plugins.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- Cusom css -->
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<!-- Modernizer js -->
+	<script src="/js/modernizr-3.5.0.min.js"></script>
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+
+		<!-- Header -->
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
+						<div class="logo">
+							<a href="/home">
+								<img src="/picture/logo.png" alt="logo images">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-8 d-none d-lg-block">
+						<nav class="mainmenu__nav">
+							<ul class="meninmenu d-flex justify-content-start">
+								<li><a href="/home">主页</a></li>
+								<li><a href="/detail?id=6912">详情</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-8 col-sm-8 col-5 col-lg-2">
+						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+							<li class="shop_search"><a class="search__active" href=""></a></li>
+
+						
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<!-- Start Mobile Menu -->
+				<div class="row d-none">
+					<div class="col-lg-12 d-none">
+						<nav class="mobilemenu__nav">
+							<ul class="meninmenu">
+								<li><a href="/home">Home</a></li>
+								<li><a href="">小书屋</a></li>
+								<li><a href="single-product.html">详情书页</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- End Mobile Menu -->
+				<div class="mobile-menu d-block d-lg-none">
+				</div>
+				<!-- Mobile Menu -->
+			</div>
+		</header>
+		<!-- //Header -->
+		<!-- Start Search Popup -->
+		<div class="box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" method="POST" action="/search">
+				<div class="field__search">
+					<input type="text" name="key" placeholder="搜索图书名字或者作者名字">
+					<div class="action">
+						<a role="button" type="submit"><i class="zmdi zmdi-search"></i></a>
+					</div>
+				</div>
+			</form>
+			<div class="close__wrap">
+				<span>close</span>
+			</div>
+		</div>
+		<!-- End Search Popup -->
+		<!-- Start Bradcaump area -->
+		<div class="ht__bradcaump__area bg-image--5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="bradcaump__inner text-center">
+							<h2 class="bradcaump-title">小书屋</h2>
+							<nav class="bradcaump-content">
+								<a class="breadcrumb_item" href="/home">Home</a>
+								<span class="brd-separetor">/</span>
+								<span class="breadcrumb_item active">小书屋</span>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Bradcaump area -->
+		<!-- Start Shop Page -->
+		<div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
+			<div class="container">
+				<div class="row">
+					<div style="border-right: 1px solid black;" class="col-lg-3 col-12 order-2 order-lg-1 md-mt-40 sm-mt-40">
+						<div  class="shop__sidebar">
+		
+							<aside  class="wedget__categories sidebar--banner">
+								小书屋
+							</aside>
+						</div>
+					</div>
+					<div class="col-lg-9 col-12 order-1 order-lg-2">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="shop__list__wrapper d-flex flex-wrap flex-md-nowrap justify-content-between">
+									<div class="shop__list nav justify-content-center" role="tablist">
+
+										<a class="nav-item nav-link active" data-toggle="tab" href="" role="tab"><i
+												class="fa fa-list"></i></a>
+									</div>
+									<p>Showing <%-(+currentPage-1)*12+1%>–<%-(+currentPage)*12%> of all results</p>
+									<div class="orderby__wrapper">
+										<span>Sort By</span>
+										<select class="shot__byselect">
+											<option  value="/book?page=1">默认排序</option>
+											<option
+											 value="/book?page=1&order=rate"
+											 <%if(order=='rate'){%>
+												selected
+											<%}%>
+											 >评分</option>
+											<option value="/book?page=1&order=looks"
+											<%if(order=='looks'){%>
+												selected
+											<%}%>
+											>浏览量</option>
+											<option value="/book?page=1&order=pubtime"
+											<%if(order=='pubtime'){%>
+												selected
+											<%}%>
+											>出版时间</option>
+											<option value="/book?page=1&order=author"
+											<%if(order=='author'){%>
+												selected
+											<%}%>
+											>作者</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab__container">
+							<div class="shop-grid tab-pane fade" id="nav-grid" role="tabpanel">
+								<div class="row">
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/14.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">Hot</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Strive Shoulder Pack</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/82.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">New</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Voyage Yoga Bag</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/33.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">Hot</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Impulse Duffle</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/42.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$60.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Beginner's Yoga</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/52.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/72.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">Hot</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Strive Shoulder Pack</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/62.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/33.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">Hot</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Strive Shoulder Pack</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/72.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">new</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Strive Shoulder Pack</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/82.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/42.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">New</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$70.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Impulse Duffle</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/91.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">Hot</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Strive Shoulder Pack</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/101.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">new</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Strive Shoulder Pack</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/112.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/42.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">New</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$70.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Impulse Duffle</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+									<!-- Start Single Product -->
+									<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+										<div class="product">
+											<div class="product__thumb">
+												<a class="first__img" href="single-product.html"><img src="/picture/122.jpg"
+														alt="product image"></a>
+												<a class="second__img animation1" href="single-product.html"><img src="/picture/23.jpg"
+														alt="product image"></a>
+												<div class="new__box">
+													<span class="new-label">Hot</span>
+												</div>
+												<ul class="prize position__right__bottom d-flex">
+													<li>$40.00</li>
+													<li class="old_prize">$55.00</li>
+												</ul>
+												<div class="action">
+													<div class="actions_inner">
+														<ul class="add_to_links">
+															<li><a class="cart" href=""></a></li>
+															<li><a class="wishlist" href=""></a></li>
+															<li><a class="compare" href="javascript:;"></a></li>
+															<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link"
+																	href=""></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="product__content">
+												<h4><a href="single-product.html">Strive Shoulder Pack</a></h4>
+												<ul class="rating d-flex">
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li class="on"><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+													<li><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- End Single Product -->
+								</div>
+								<ul class="wn__pagination">
+									<li class="active"><a href="">1</a></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><a href="">4</a></li>
+									<li><a href=""><i class="zmdi zmdi-chevron-right"></i></a></li>
+								</ul>
+							</div>
+							<div class="shop-grid tab-pane fade show active" id="nav-list" role="tabpanel">
+								<div class="list__view__wrapper">
+									<!-- Start Single Product -->
+									<%for(let i=0;i<books.length;i++){let book = books[i]%>
+									<div class="list__view">
+										<div class="thumb">
+											<a class="first__img" href="/detail?id=<%-book.id%>">
+												<img src="<%-book.imgurl%>" style="width: 261px;height: 328px;" alt="product images"></a>
+										</div>
+										<div class="content">
+											<h2><a href="/detail?id=<%-book.id%>"><%-book.title%></a></h2>
+											<ul class="rating d-flex">
+												<%for(let i=0;i<10;i++){%>
+													<%if(i<+book.rate){%>
+														<li class="on"><i class="fa fa-star-o"></i></li>
+													<%}else{%>
+													<li><i class="fa fa-star-o"></i></li>
+													<%}%>
+												<%}%>
+												<span style="color: #ccc;"><%-book.rate%></span>
+											</ul>
+											<p><%-book.detail&&book.detail.length>200?book.detail.substr(0,200)+'...':book.detail%></p>
+											<ul class="cart__action d-flex">
+												<li class="cart"><a href="<%-book.downloadurl1%>">download1</a></li>
+												<li class="cart"><a href="<%-book.downloadurl2%>">download2</a></li>
+												<%if(book.baiduCode&&book.baiduCode.includes('提取码')){%>
+												<li class="cart"><a style="cursor: not-allowed;"><%-/提取码：(\w+)/.exec(book.baiduCode)[1]%></a></li>
+												<%}%>
+											</ul>
+
+										</div>
+									</div>
+									<%}%>
+												<!-- End Single Product -->
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="pagination pagination-sm justify-content-center">
+					<li class="page-item
+					<%if(currentPage == 1){%>
+					 disabled
+					 <%}%>
+					 ">
+						<a href="/book?page=<%-+currentPage-1%>" class="page-link">Previous</a>
+					</li>
+					<%for(let i=+currentPage-5;i<+currentPage+5;i++){%>
+						<%if(i>0){%>
+							
+							<li class="page-item 
+								<%if(currentPage==i){%>
+									active
+									<%}%>
+							"><a class="page-link" href="/book?page=<%-i%>"><%-i%></a></li>
+							<%}else{}%>
+					<%}%>
+					
+					<li class="page-item">
+						<a class="page-link" href="/book?page=<%-+currentPage+1%>">Next</a>
+					</li>
+				</ul>
+				<!-- End Shop Page -->
+				<!-- Footer Area -->
+				<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+					<div class="footer-static-top">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="footer__widget footer__menu">
+										<div class="ft__logo">
+											<a href="/home">
+												<img src="/picture/logo.png" alt="logo">
+											</a>
+											<p>用作练习</p>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="copyright__wrapper">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="copyright">
+										<div class="copy__right__inner text-left">
+											<p>Copyright &copy; 我的书库练习</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</footer>
+				<!-- //Footer Area -->
+
+			</div>
+			<!-- //Main wrapper -->
+
+			<!-- JS Files -->
+			<script src="/js/jquery-3.2.1.min.js"></script>
+			<script src="/js/popper.min.js"></script>
+			<script src="/js/bootstrap.min.js"></script>
+			<script src="/js/plugins.js"></script>
+			<script src="/js/active.js"></script>
+			<script>
+				let currentPage = <%-currentPage%>
+				console.log(currentPage)
+				let select = document.querySelector('.shot__byselect')
+				select.onchange=function(e){
+					var selected=$(this).children('option:selected').val()
+					console.log(selected)
+					location.href = selected
+				}
+			
+			</script>
+</body>
+
+</html>
