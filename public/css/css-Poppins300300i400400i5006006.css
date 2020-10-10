@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Poppins Light Italic'), local('Poppins-LightItalic'), url(../font/pxiDyp8kv8JHgFVrJJLm21lVF9eI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Poppins Italic'), local('Poppins-Italic'), url(../font/pxiGyp8kv8JHgFVrJJLucHtG.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Poppins SemiBold Italic'), local('Poppins-SemiBoldItalic'), url(../font/pxiDyp8kv8JHgFVrJJLmr19VF9eI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Poppins Bold Italic'), local('Poppins-BoldItalic'), url(../font/pxiDyp8kv8JHgFVrJJLmy15VF9eI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Poppins Light'), local('Poppins-Light'), url(../font/pxiByp8kv8JHgFVrLDz8Z1xlEw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(../font/pxiEyp8kv8JHgFVrJJfedA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Poppins Medium'), local('Poppins-Medium'), url(../font/pxiByp8kv8JHgFVrLGT9Z1xlEw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(../font/pxiByp8kv8JHgFVrLEj6Z1xlEw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'), url(../font/pxiByp8kv8JHgFVrLCz7Z1xlEw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'), url(../font/pxiByp8kv8JHgFVrLDD4Z1xlEw.woff) format('woff');
+}
